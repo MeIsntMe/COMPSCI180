@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-beige: rgba(255,250,249,255);
+  --color-text-default: rgb(173,124,114);
+}
+
+
