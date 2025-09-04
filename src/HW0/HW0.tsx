@@ -9,7 +9,7 @@ export default function HW0() {
     <div className="p-8 flex flex-col items-center gap-4">
       <h1 className="text-3xl font-bold text-white bg-text-default w-full p-4 rounded-xl">Homework 0</h1>
       <div className="flex flex-col justify-center align-center items-center gap-3 bg-beige w-full py-4">
-        <p className="text-xl w-1/3 p-1 bg-text-default text-white font-bold rounded">Face</p>
+        <p className="text-xl w-1/3 p-1 bg-text-default text-white font-bold rounded-[0.5rem] text-center">Face</p>
         <div className="flex flex-row gap-10 p-2">
             <div className="flex flex-col gap-2">
                 <img src={face1} alt="Face 1" className="w-32 " />
@@ -22,7 +22,7 @@ export default function HW0() {
         </div>
       </div>
       <div className="flex flex-col justify-center align-center items-center gap-3 bg-beige w-full py-4">
-        <p className="text-xl w-1/3 p-1 bg-text-default text-white font-bold rounded">Urban Path</p>
+        <p className="text-xl w-1/3 p-1 bg-text-default text-white font-bold rounded-[0.5rem] text-center">Urban Path</p>
         <div className="flex flex-row gap-4">
             <div className="flex flex-col gap-2">
                 <img src={urbanPath1} alt="Face 1" className="w-32 " />
@@ -35,7 +35,7 @@ export default function HW0() {
         </div>
       </div>
       <div className="flex flex-col justify-center align-center items-center gap-3 bg-beige w-full py-4">
-        <p className="text-xl w-1/3 p-1 bg-text-default text-white font-bold rounded">GIF</p>
+        <p className="text-xl w-1/3 p-1 bg-text-default text-white font-bold rounded-[0.5rem] text-center">GIF</p>
         <div className="flex flex-col gap-2">
             <img src={pandaGif} alt="Face 2" className="w-32 pb-1" />
         </div>

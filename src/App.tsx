@@ -11,9 +11,9 @@ function App() {
       <div className="bg-cover bg-center bg-color-500 w-full h-full absolute z-[-1] object-top-left" style={{ backgroundImage: `url(${backgroundImage})`}}></div>
       <div className='py-10 px-20 h-full w-full flex flex-col'>
         <Router>
-          <nav className="p-4 bg-gray-200 flex gap-4">
-            <Link to="/" className="text-blue-600">Home</Link>
-            <Link to="/HW0" className="text-blue-600">HW0</Link>
+          <nav className="p-4 bg-text-default flex gap-4">
+            <Link to="/" className="font-bold text-beige">Home</Link>
+            <Link to="/HW0" className="font-bold text-beige">HW0</Link>
           </nav>
 
           <div className='bg-beige grow-1 overflow-scroll'>

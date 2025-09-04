@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Submission
+*.pdf
+\#Prints
+\#Prints/HW0.pdf
