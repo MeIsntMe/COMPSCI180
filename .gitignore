@@ -30,3 +30,4 @@ dist-ssr
 *.zip
 *\test.py
 src/HW1/ProjectData/extra_functions_pls_ignore.py
+src/HW1/ProjectData/code/*
