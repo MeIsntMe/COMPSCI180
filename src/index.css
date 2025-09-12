@@ -2,7 +2,9 @@
 
 @theme {
   --color-beige: rgba(255,250,249,255);
-  --color-text-default: rgb(173,124,114);
+  --color-brown: rgb(173,124,114);
+  --color-light-brown: rgba(241,210,185,255);
+  --color-dark-brown: rgb(45, 20, 14);
   --radius-3xl: 4rem;
 }
 

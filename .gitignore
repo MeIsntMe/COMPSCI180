@@ -27,3 +27,6 @@ dist-ssr
 *.pdf
 \#Prints
 \#Prints/HW0.pdf
+*.zip
+*\test.py
+src/HW1/cs180 proj1 data/extra_functions_pls_ignore.py
