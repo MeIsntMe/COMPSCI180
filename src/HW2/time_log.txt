@@ -27,6 +27,7 @@ scipy took 0.0038 sec for Dx
 four_pass_convolution took 0.6784 sec for Dy
 two_pass_convolution took 1.1619 sec for Dy
 scipy took 0.0047 sec for Dy
+
 four_pass_convolution took 6.2217 sec for box_filter
 two_pass_convolution took 0.9247 sec for box_filter
 scipy took 0.6885 sec for box_filter
