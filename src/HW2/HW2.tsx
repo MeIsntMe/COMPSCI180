@@ -152,7 +152,7 @@ export default function HW2() {
                 </p>
 
                 <p className="bg-light-brown p-2 rounded text-dark-brown">Contrasting Sharpening Alphas</p>
-                <div className="grid grid-rows-1 grid-cols-4 p-2 flex-wrap items-center justify-center">
+                <div className="grid grid-rows-1 grid-cols-3 p-2 flex-wrap items-center justify-center">
                     <div className={`flex flex-col items-center gap-1 p-2 rounded`}>
                         <a href={taj_grey} target="_blank" rel="noopener noreferrer">
                         <img key={taj_grey} src={taj_grey} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
@@ -161,7 +161,7 @@ export default function HW2() {
                             {taj_grey.split('/').pop()?.split('.')[0]}
                         </p>
                     </div> 
-                    {sortedProcessedImages["part_2_1"]?.slice(-6, -3)?.map((image) => (
+                    {sortedProcessedImages["part_2_1"]?.slice(3, 5)?.map((image) => (
                         <div className={`flex flex-col items-center gap-1 p-2 rounded`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
