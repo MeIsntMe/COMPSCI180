@@ -39,7 +39,7 @@ export default function HW2() {
                             <img key={image} src={image} alt="" className="w-48 h-auto rounded-lg cursor-pointer"/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -54,7 +54,7 @@ export default function HW2() {
                                         <img key={image} src={image} alt="" className="w-120 h-auto rounded-lg cursor-pointer"/>
                                     </a>
                                     <p className="text-dark-brown"> 
-                                        {image.split('/')[6].split('.')[0]}
+                                        {image.split('/').pop()?.split('.')[0]}
                                     </p>
                             </div> 
                         ))}
@@ -77,12 +77,12 @@ export default function HW2() {
                 <p className="bg-light-brown p-2 rounded text-dark-brown">Images</p>
                 <div className="grid grid-rows-2 grid-cols-3 p-2 flex-wrap items-center justify-center">
                     {sortedProcessedImages["part_1_2"]?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_50_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_50_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -108,12 +108,12 @@ export default function HW2() {
                 <p className="bg-light-brown p-2 rounded text-dark-brown">Two Convolution</p>
                 <div className="grid grid-rows-1 grid-cols-3 p-2 flex-wrap items-center justify-center">
                     {sortedProcessedImages["part_1_3"].slice(3, 6)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[7].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -122,12 +122,12 @@ export default function HW2() {
                 <p className="bg-light-brown p-2 rounded text-dark-brown">One Convolution</p>
                 <div className="grid grid-rows-1 grid-cols-3 p-2 flex-wrap items-center justify-center">
                     {sortedProcessedImages["part_1_3"].slice(0, 3)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[7].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -158,7 +158,7 @@ export default function HW2() {
                         <img key={taj_grey} src={taj_grey} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                         </a>
                         <p className="text-dark-brown"> 
-                            {taj_grey.split('/')[5].split('.')[0]}
+                            {taj_grey.split('/').pop()?.split('.')[0]}
                         </p>
                     </div> 
                     {sortedProcessedImages["part_2_1"]?.slice(-6, -3)?.map((image) => (
@@ -167,7 +167,7 @@ export default function HW2() {
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[7].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -184,7 +184,7 @@ export default function HW2() {
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[7].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -194,24 +194,24 @@ export default function HW2() {
                 <div className="flex flex-col">
                     <div className="grid grid-rows-1 grid-cols-3 p-2 flex-wrap items-center justify-center">
                         {sortedProcessedImages["part_2_1"].slice(2, 5)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[7].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
                     </div>
                     <div className="grid grid-rows-1 grid-cols-2 p-2 flex-wrap items-center justify-center">
                         {sortedProcessedImages["part_2_1"].slice(0, 2)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[7].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -237,16 +237,16 @@ export default function HW2() {
                         <img key={img} src={img} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                         </a>
                         <p className="text-dark-brown"> 
-                            {img.split('/')[5].split('.')[0]}
+                            {img.split('/').pop()?.split('.')[0]}
                         </p>
                     </div> ))}
                     {sortedProcessedImages["part_2_2"].slice(0, 1)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -259,16 +259,16 @@ export default function HW2() {
                         <img key={img} src={img} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                         </a>
                         <p className="text-dark-brown"> 
-                            {img.split('/')[5].split('.')[0]}
+                            {img.split('/').pop()?.split('.')[0]}
                         </p>
                     </div> ))}
                     {sortedProcessedImages["part_2_2"].slice(1, 2)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -281,16 +281,16 @@ export default function HW2() {
                         <img key={img} src={img} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                         </a>
                         <p className="text-dark-brown"> 
-                            {img.split('/')[5].split('.')[0]}
+                            {img.split('/').pop()?.split('.')[0]}
                         </p>
                     </div> ))}
                     {sortedProcessedImages["part_2_2"].slice(6,7)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -299,32 +299,32 @@ export default function HW2() {
                 <p className="bg-light-brown p-2 rounded text-dark-brown">Panda Progress</p>
                 <div className="grid grid-rows-1 grid-cols-2 p-2 flex-wrap items-center justify-center">
                     {sortedProcessedImages["part_2_2"].slice(2,4)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
                     {sortedProcessedImages["part_2_2"].slice(7,9)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
                     {sortedProcessedImages["part_2_2"].slice(4,6)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[6].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -335,12 +335,12 @@ export default function HW2() {
                 <p className="bg-light-brown p-2 rounded text-dark-brown">One Convolution</p>
                 <div className="grid grid-rows-1 grid-cols-3 p-2 flex-wrap items-center justify-center">
                     {sortedProcessedImages["part_1_3"].slice(0, 3)?.map((image) => (
-                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
+                        <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_68_chosen" ? "bg-gray-400" : ""}`}>
                             <a href={image} target="_blank" rel="noopener noreferrer">
                             <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/')[7].split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0]}
                             </p>
                         </div> 
                     ))}
@@ -368,12 +368,12 @@ export default function HW2() {
                 <div className="flex flex-row justify-center items-center align-center">
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_3"].slice(13, 17)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -381,12 +381,12 @@ export default function HW2() {
 
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_3"].slice(17, 21)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -395,12 +395,12 @@ export default function HW2() {
                     {/* Masks */}
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_3"].slice(21, 26)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -409,12 +409,12 @@ export default function HW2() {
                     {/* Results */}
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_3"].slice(0, 5)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -425,12 +425,12 @@ export default function HW2() {
                 <div className="flex flex-row justify-center items-center align-center">
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(26, 30)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -438,12 +438,12 @@ export default function HW2() {
 
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(30, 34)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -451,12 +451,12 @@ export default function HW2() {
 
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(42, 46)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -464,12 +464,12 @@ export default function HW2() {
 
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(0, 5)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -480,12 +480,12 @@ export default function HW2() {
                 <div className="flex flex-row justify-center items-center align-center">
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(34, 38)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -493,12 +493,12 @@ export default function HW2() {
 
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(38, 42)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -506,12 +506,12 @@ export default function HW2() {
 
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(46, 50)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
@@ -519,12 +519,12 @@ export default function HW2() {
 
                     <div className="grid grid-rows-5 grid-cols-1 p-2 flex-wrap items-center justify-center grid-flow-col">
                         {sortedProcessedImages["part_2_4"].slice(5, 10)?.map((image) => (
-                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/')[6].split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
+                            <div className={`flex flex-col items-center gap-1 p-2 rounded ${image.split('/').pop()?.split('.')[0] == "cameraman_45_chosen" ? "bg-gray-400" : ""}`}>
                                 <a href={image} target="_blank" rel="noopener noreferrer">
                                 <img key={image} src={image} alt="" className={`w-48 h-auto rounded-lg cursor-pointer`}/>
                                 </a>
                                 <p className="text-dark-brown"> 
-                                    {image.split('/')[6].split('.')[0]}
+                                    {image.split('/').pop()?.split('.')[0]}
                                 </p>
                             </div> 
                         ))}
