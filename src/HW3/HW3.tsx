@@ -61,10 +61,10 @@ export default function HW3() {
             {Object.entries(HaasImages).map(([name, image]) => (
                 <div className="flex flex-col items-center gap-1">
                     <a href={image} target="_blank" rel="noopener noreferrer">
-                        <img key={image} src={image.split('-')[0]} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
                     </a>
                     <p className="text-dark-brown"> 
-                        {image.split('/').pop()?.split('.')[0]}
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
                     </p>
                 </div> 
             ))}
@@ -73,10 +73,10 @@ export default function HW3() {
             {Object.entries(StadiumImages).map(([name, image]) => (
                 <div className="flex flex-col items-center gap-1">
                     <a href={image} target="_blank" rel="noopener noreferrer">
-                        <img key={image} src={image.split('-')[0]} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
                     </a>
                     <p className="text-dark-brown"> 
-                        {image.split('/').pop()?.split('.')[0]}
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
                     </p>
                 </div> 
             ))}
@@ -85,10 +85,10 @@ export default function HW3() {
             {Object.entries(StationImages).map(([name, image]) => (
                 <div className="flex flex-col items-center gap-1">
                     <a href={image} target="_blank" rel="noopener noreferrer">
-                        <img key={image} src={image.split('-')[0]} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
                     </a>
                     <p className="text-dark-brown"> 
-                        {image.split('/').pop()?.split('.')[0]}
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
                     </p>
                 </div> 
             ))}
@@ -105,10 +105,10 @@ export default function HW3() {
             {Object.entries(A2Images).map(([name, image]) => (
                 <div className="flex flex-col items-center gap-1">
                     <a href={image} target="_blank" rel="noopener noreferrer">
-                        <img key={image} src={image.split('-')[0]} alt={name} className="w-auto h-80px rounded-lg cursor-pointer"/>
+                        <img key={image} src={image} alt={name} className="w-auto h-80px rounded-lg cursor-pointer"/>
                     </a>
                     <p className="text-dark-brown"> 
-                        {image.split('/').pop()?.split('.')[0]}
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
                     </p>
                 </div> 
             ))}
@@ -192,10 +192,10 @@ export default function HW3() {
             {Object.entries(allOriginalImages).slice(-2,)?.map(([name, image]) => (
                 <div className="flex flex-col items-center gap-1">
                     <a href={image} target="_blank" rel="noopener noreferrer">
-                        <img key={image} src={image.split('-')[0]} alt={name} className="w-60 h-auto rounded-lg cursor-pointer"/>
+                        <img key={image} src={image} alt={name} className="w-60 h-auto rounded-lg cursor-pointer"/>
                     </a>
                     <p className="text-dark-brown"> 
-                        {image.split('/').pop()?.split('.')[0]}
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
                     </p>
                 </div> 
             ))}
@@ -205,10 +205,10 @@ export default function HW3() {
             {Object.entries(A3Images).slice(0,6)?.map(([name, image]) => (
                 <div className="flex flex-col items-center gap-1">
                     <a href={image} target="_blank" rel="noopener noreferrer">
-                        <img key={image} src={image.split('-')[0]} alt={name} className="w-60 h-auto rounded-lg cursor-pointer"/>
+                        <img key={image} src={image} alt={name} className="w-60 h-auto rounded-lg cursor-pointer"/>
                     </a>
                     <p className="text-dark-brown"> 
-                        {image.split('/').pop()?.split('.')[0]}
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
                     </p>
                 </div> 
             ))}
@@ -218,10 +218,10 @@ export default function HW3() {
             {Object.entries(A3Images).slice(6,)?.map(([name, image]) => (
                 <div className="flex flex-col items-center gap-1">
                     <a href={image} target="_blank" rel="noopener noreferrer">
-                        <img key={image} src={image.split('-')[0]} alt={name} className="w-60 h-auto rounded-lg cursor-pointer"/>
+                        <img key={image} src={image} alt={name} className="w-60 h-auto rounded-lg cursor-pointer"/>
                     </a>
                     <p className="text-dark-brown"> 
-                        {image.split('/').pop()?.split('.')[0]}
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
                     </p>
                 </div> 
             ))}
@@ -263,10 +263,10 @@ export default function HW3() {
                     {Object.entries(A4Images).slice(0,4)?.map(([name, image]) => (
                         <div className="flex flex-col items-center gap-1">
                             <a href={image} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                                <img key={image} src={image.split('-')[0]} alt={name} className="w-3/4 h-auto rounded-lg cursor-pointer"/>
+                                <img key={image} src={image} alt={name} className="w-3/4 h-auto rounded-lg cursor-pointer"/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/').pop()?.split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0].split('-')[0]}
                             </p>
                         </div> 
                     ))}
@@ -274,10 +274,10 @@ export default function HW3() {
                 {Object.entries(A4Images).slice(4, 5)?.map(([name, image]) => (
                     <div className="flex flex-col items-center gap-1 self-center">
                         <a href={image} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                            <img key={image} src={image.split('-')[0]} alt={name} className="w-5/6 h-auto rounded-lg cursor-pointer"/>
+                            <img key={image} src={image} alt={name} className="w-5/6 h-auto rounded-lg cursor-pointer"/>
                         </a>
                         <p className="text-dark-brown"> 
-                            {image.split('/').pop()?.split('.')[0]}
+                            {image.split('/').pop()?.split('.')[0].split('-')[0]}
                         </p>
                     </div> 
                 ))}
@@ -292,10 +292,10 @@ export default function HW3() {
                     {Object.entries(A4Images).slice(5,9)?.map(([name, image]) => (
                         <div className="flex flex-col items-center gap-1">
                             <a href={image} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                                <img key={image} src={image.split('-')[0]} alt={name} className="w-3/4 h-auto rounded-lg cursor-pointer"/>
+                                <img key={image} src={image} alt={name} className="w-3/4 h-auto rounded-lg cursor-pointer"/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/').pop()?.split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0].split('-')[0]}
                             </p>
                         </div> 
                     ))}
@@ -303,10 +303,10 @@ export default function HW3() {
                 {Object.entries(A4Images).slice(9,10)?.map(([name, image]) => (
                     <div className="flex flex-col items-center gap-1 self-center">
                         <a href={image} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                            <img key={image} src={image.split('-')[0]} alt={name} className="w-5/6 h-auto rounded-lg cursor-pointer"/>
+                            <img key={image} src={image} alt={name} className="w-5/6 h-auto rounded-lg cursor-pointer"/>
                         </a>
                         <p className="text-dark-brown"> 
-                            {image.split('/').pop()?.split('.')[0]}
+                            {image.split('/').pop()?.split('.')[0].split('-')[0]}
                         </p>
                     </div> 
                 ))}
@@ -321,10 +321,10 @@ export default function HW3() {
                     {Object.entries(A4Images).slice(10, 14)?.map(([name, image]) => (
                         <div className="flex flex-col items-center gap-1">
                             <a href={image} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                                <img key={image} src={image.split('-')[0]} alt={name} className="w-3/4 h-auto rounded-lg cursor-pointer"/>
+                                <img key={image} src={image} alt={name} className="w-3/4 h-auto rounded-lg cursor-pointer"/>
                             </a>
                             <p className="text-dark-brown"> 
-                                {image.split('/').pop()?.split('.')[0]}
+                                {image.split('/').pop()?.split('.')[0].split('-')[0]}
                             </p>
                         </div> 
                     ))}
@@ -332,10 +332,10 @@ export default function HW3() {
                 {Object.entries(A4Images).slice(14, )?.map(([name, image]) => (
                     <div className="flex flex-col items-center gap-1 self-center">
                         <a href={image} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                            <img key={image} src={image.split('-')[0]} alt={name} className="w-5/6 h-auto rounded-lg cursor-pointer"/>
+                            <img key={image} src={image} alt={name} className="w-5/6 h-auto rounded-lg cursor-pointer"/>
                         </a>
                         <p className="text-dark-brown"> 
-                            {image.split('/').pop()?.split('.')[0]}
+                            {image.split('/').pop()?.split('.')[0].split('-')[0]}
                         </p>
                     </div> 
                 ))}
