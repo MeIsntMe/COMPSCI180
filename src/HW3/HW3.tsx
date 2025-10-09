@@ -15,17 +15,21 @@ export default function HW3() {
     const A4Images: Record<string, string>  = {}
 
     Object.keys(OriginalImageImports).forEach(key => {
-        allOriginalImages[key] = OriginalImageImports[key].default
+        const new_key = key.split('-')[0];
+        allOriginalImages[new_key] = OriginalImageImports[key].default
     });
 
     Object.keys(A2ImagesImports).forEach(key => {
-        A2Images[key] = A2ImagesImports[key].default
+        const new_key = key.split('-')[0];
+        A2Images[new_key] = A2ImagesImports[key].default
     });
     Object.keys(A3ImagesImports).forEach(key => {
-        A3Images[key] = A3ImagesImports[key].default
+        const new_key = key.split('-')[0];
+        A3Images[new_key] = A3ImagesImports[key].default
     });
     Object.keys(A4ImagesImports).forEach(key => {
-        A4Images[key] = A4ImagesImports[key].default
+        const new_key = key.split('-')[0];
+        A4Images[new_key] = A4ImagesImports[key].default
     });
 
     const HaasImages: Record<string, string> = Object.fromEntries(
