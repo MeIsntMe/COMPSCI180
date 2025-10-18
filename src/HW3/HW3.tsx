@@ -9,10 +9,21 @@ export default function HW3() {
     const A3ImagesImports: Record<string, {default: string}> = import.meta.glob('./1_3/*.jp*g', {eager:true});
     const A4ImagesImports: Record<string, {default: string}> = import.meta.glob('./1_4/*.jp*g', {eager:true});
 
+    const B1ImagesImports: Record<string, {default: string}> = import.meta.glob('./B_1/*.jp*g', {eager:true});
+    const B2ImagesImports: Record<string, {default: string}> = import.meta.glob('./B_2/*.jp*g', {eager:true});
+    const B3ImagesImports: Record<string, {default: string}> = import.meta.glob('./B_3/*.jp*g', {eager:true});
+    const B4ImagesImports: Record<string, {default: string}> = import.meta.glob('./B_4/*.jp*g', {eager:true});
+    
+
     const allOriginalImages: Record<string, string>  = {}
     const A2Images: Record<string, string>  = {}
     const A3Images: Record<string, string>  = {}
     const A4Images: Record<string, string>  = {}
+
+    const B1Images: Record<string, string>  = {}
+    const B2Images: Record<string, string>  = {}
+    const B3Images: Record<string, string>  = {}
+    const B4Images: Record<string, string>  = {}
 
     Object.keys(OriginalImageImports).forEach(key => {
         const new_key = key.split('-')[0];
@@ -32,6 +43,26 @@ export default function HW3() {
         A4Images[new_key] = A4ImagesImports[key].default;
     });
 
+    Object.keys(B1ImagesImports).forEach(key => {
+        const new_key = key.split('-')[0];
+        B1Images[new_key] = B1ImagesImports[key].default;
+    });
+
+    Object.keys(B2ImagesImports).forEach(key => {
+        const new_key = key.split('-')[0];
+        B2Images[new_key] = B2ImagesImports[key].default;
+    });
+
+    Object.keys(B3ImagesImports).forEach(key => {
+        const new_key = key.split('-')[0];
+        B3Images[new_key] = B3ImagesImports[key].default;
+    });
+
+    Object.keys(B4ImagesImports).forEach(key => {
+        const new_key = key.split('-')[0];
+        B4Images[new_key] = B4ImagesImports[key].default;
+    });
+
     const HaasImages: Record<string, string> = Object.fromEntries(
         Object.entries(allOriginalImages).filter(([key]) => key.includes("Haas"))
     );
@@ -44,16 +75,17 @@ export default function HW3() {
 
 
   return (
-    <div className="p-8 flex flex-col items-center gap-6">
+    <div className="p-8 flex flex-col items-center gap-4">
+
       {/* Header */}
-      <header className="w-full flex flex-col items-center gap-2">
+      <div className="w-full flex flex-col items-center gap-2">
         <h1 className="text-3xl font-bold text-white bg-brown w-full max-w-5xl p-4 rounded-xl text-center">
           Homework 3
         </h1>
-      </header>
+      </div>
 
       {/* A.1: Take Pictures */}
-      <section id="A1" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+      <div id="A1" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
         <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">A.1: Shoot the Pictures</h3>
         <p className="text-center bg-light-brown p-2 rounded w-1/3 self-center mb-4">Initial Image Sets</p>
         <div>
@@ -94,10 +126,10 @@ export default function HW3() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* A.2: Recover Homographies */}
-      <section id="A2" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+      <div id="A2" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
         <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">A.2: Recover Homographies</h3>
         <p className="font-semibold text-center bg-light-brown p-2 rounded w-1/3 self-center">Point Correspondences Visualization</p>
         <div className="bg-white rounded p-2 text-dark-brown">
@@ -147,7 +179,7 @@ export default function HW3() {
             </div>
         </div>
         <p className="font-semibold text-center bg-light-brown p-2 rounded w-1/3 self-center">Recovered Homography (H)</p>
-        <div className="border border-light-brown border-3 rounded p-3 text-dark-brown">
+        <div className="border border-light-brown border-3 rounded p-3 text-dark-brown ">
             {Object.entries(Homographies).map(([name, matrix]) => (
                 <div key={name} className="flex flex-col items-center">
                     <h2 className="text-lg font-semibold mb-3">{name}</h2>
@@ -164,10 +196,10 @@ export default function HW3() {
                 </div>
             ))}
         </div>
-      </section>
+      </div>
 
       {/* A.3: Warp Images */}
-      <section id="A3" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+      <div id="A3" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
         <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">A.3: Warp the Images</h3>
         <p className="font-semibold text-center bg-light-brown p-2 rounded w-1/3 self-center">Explanation</p>
         <div className="border border-light-brown border-3 text-dark-brown text-center flex flex-col gap-4 py-4">
@@ -226,10 +258,10 @@ export default function HW3() {
                 </div> 
             ))}
         </div>
-      </section>
+      </div>
 
       {/* A.4: Blend Mosaics */}
-      <section id="A4" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+      <div id="A4" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
         <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">A.4: Blend the Images into a Mosaic</h3>
         <p className="font-semibold text-center bg-light-brown p-2 rounded w-1/3 self-center">Explanation</p>
         <div className="border border-light-brown border-3 text-dark-brown text-center flex flex-col gap-2 py-4">
@@ -342,16 +374,211 @@ export default function HW3() {
                 </div>
             </div>
         </div>
-      </section>
+      </div>
+
+
+      <div id="B1" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+        <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">B.1: Harris Corner Detection</h3>
+        <p className="text-center bg-light-brown p-2 rounded w-1/3 self-center mb-4">Detected Points w/ & w/o ANMS</p>
+        <div>
+          <div className="grid grid-cols-4 gap-4">
+            {Object.entries(B1Images).map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="B2" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+        <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">B.2: Feature Descriptor Extraction</h3>
+        <p className="text-center bg-light-brown p-2 rounded w-1/3 self-center mb-4">Extracted Features Samples</p>
+        <div>
+          <div className="grid grid-cols-4 gap-4">
+            {Object.entries(B2Images).map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} 
+                        className="w-32 h-auto rounded-lg cursor-pointer pixel-render"
+                        style={{imageRendering: 'pixelated'}}
+                        />
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="B3" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+        <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">B.3: Feature Matching</h3>
+        <p className="text-center bg-light-brown p-2 rounded w-1/3 self-center mb-4">Matched Feature Points</p>
+        <div>
+          <div className="grid grid-cols-4 gap-4">
+            {Object.entries(B3Images).map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="B4" className="w-full max-w-5xl bg-beige rounded-xl p-5 flex flex-col gap-4">
+        <h3 className="text-xl w-full p-2 bg-brown text-white font-bold rounded text-center">B.4: RANSAC & Auto-Merging</h3>
+        <p className="text-center bg-light-brown p-2 rounded w-1/3 self-center mb-4">Warped & Merged Images <br/>(Contrasting w/ Manual)</p>
+
+        <p className="text-l bg-gray-200 text-center rounded px-2 self-center">Auto</p>
+        <div>
+          <div className="grid grid-cols-5 gap-4">
+            {Object.entries(B4Images).slice(10, 15)?.map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+            </div>
+        </div>
+
+        <p className="text-l bg-gray-200 text-center rounded px-2 self-center">Manual</p>
+        <div>
+            <div className="grid grid-cols-5 gap-4">
+            {Object.entries(A4Images).slice(0, 5)?.map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+
+        <p className="text-l bg-gray-200 text-center rounded px-2 self-center">Auto</p>
+        <div>
+          <div className="grid grid-cols-5 gap-4">
+            {Object.entries(B4Images).slice(15, 20)?.map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+
+        <p className="text-l bg-gray-200 text-center rounded px-2 self-center">Manual</p>
+        <div>
+            <div className="grid grid-cols-5 gap-4">
+            {Object.entries(A4Images).slice(5, 10)?.map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+
+        <p className="text-l bg-gray-200 text-center rounded px-2 self-center">Auto</p>
+        <div>
+          <div className="grid grid-cols-5 gap-4">
+            {Object.entries(B4Images).slice(20, 25)?.map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+
+        <p className="text-l bg-gray-200 text-center rounded px-2 self-center">Manual</p>
+        <div>
+            <div className="grid grid-cols-5 gap-4">
+            {Object.entries(A4Images).slice(10, 15)?.map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+
+        <p className="text-l bg-gray-200 text-center rounded px-2 self-center">Explanation/Evaluation</p>
+        <div className="border border-light-brown border-2 rounded p-3 text-dark-brown text-center ">
+            <p> 
+                Both Haas & Station were done well in both manual and automatic merging. <br/>
+                However, the Stadium was not well done in automatic merging, likely due to the <br/>
+                far distance between the camera and the various features. Due to the rapid changes <br/>
+                and slight blur, downsizing the image may have further blurred features into becoming <br/>
+                indistinguishable. This thus likely caused the Stadium 1-2 merge to fail.
+            </p>
+            <p> 
+                Below are two new image sets.
+            </p>
+        </div>
+
+
+
+        <p className="text-center bg-light-brown p-2 rounded w-1/3 self-center mb-4">Warped & Merged Images (New)</p>
+        <div>
+          <div className="grid grid-cols-5 gap-4">
+            {Object.entries(B4Images).slice(0, 10)?.map(([name, image]) => (
+                <div className="flex flex-col items-center gap-1">
+                    <a href={image} target="_blank" rel="noopener noreferrer">
+                        <img key={image} src={image} alt={name} className="w-48 h-auto rounded-lg cursor-pointer"/>
+                    </a>
+                    <p className="text-dark-brown"> 
+                        {image.split('/').pop()?.split('.')[0].split('-')[0]}
+                    </p>
+                </div> 
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Credits */}
-      <footer className="w-full max-w-5xl flex flex-col items-start gap-1">
+      <div className="w-full max-w-5xl flex flex-col items-start gap-1">
         <p className="text-sm text-gray-600">Credits</p>
         <ul className="list-disc pl-5 text-sm text-gray-700">
           <li>Correspondence tool (Get Pixels): https://pixspy.com/</li>
           <li>Correspondence tool (Get Display): https://cal-cs180.github.io/fa23/hw/proj3/tool.html</li>
         </ul>
-      </footer>
+      </div>
+      
     </div>
   );
 }

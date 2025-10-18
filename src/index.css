@@ -8,4 +8,26 @@
   --radius-3xl: 4rem;
 }
 
+@utility pixel-render {
+  imageRendering: 'pixelated';
+}
+
+.katex-display {
+  margin: 0 !important;           /* remove top/bottom KaTeX margins */
+  overflow: hidden;               /* clip phantom descenders */
+  display: flex;
+  justify-content: center;        /* center math horizontally */
+}
+
+.katex {
+  overflow: hidden;
+}
+
+.math-container .katex-display {
+  margin: 0 !important;
+  overflow: hidden;
+}
+.math-container {
+  overflow: hidden;
+}
 
