@@ -14,8 +14,6 @@ export default function Proj4() {
     import.meta.glob('./Part_1_Results/original_image/*.*', { eager: true })
   const Part1OriginalImagesImports: Record<string, { default: string }> =
     import.meta.glob('./Part_1_Origin/*.*', { eager: true })
-  const Part1PSNRImports: Record<string, { default: string }> =
-    import.meta.glob('./Part_1_Results/contrast/*.*', { eager: true })
 
   // Part 2: Lego NeRF
   const Part2RaysSamplesImports: Record<string, { default: string }> =

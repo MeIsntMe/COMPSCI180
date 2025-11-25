@@ -5,6 +5,7 @@ import HW1 from './HW1/HW1'
 import HW2 from './HW2/HW2'
 import HW3 from './HW3/HW3'
 import HW4 from './HW4/HW4'
+import HW5 from "./HW5/HW5"
 import backgroundImage from "./assets/Fall-bg.jpg"
 import './App.css'
 
@@ -22,6 +23,7 @@ function App() {
             <Link to="/HW2" className="font-bold text-beige">HW2</Link>
             <Link to="/HW3" className="font-bold text-beige">HW3</Link>
             <Link to="/HW4" className="font-bold text-beige">HW4</Link>
+            <Link to="/HW5" className="font-bold text-beige">HW5</Link>
           </nav>
 
           <div className='bg-beige grow-1 overflow-scroll'>
@@ -32,6 +34,7 @@ function App() {
               <Route path="HW2" element={<HW2/>}/>
               <Route path="HW3" element={<HW3/>}/>
               <Route path="HW4" element={<HW4/>}/>
+              <Route path="HW5" element={<HW5/>}/>
               <Route path="/*" element={<div>Error 404</div>} />
             </Routes>
           </div>
